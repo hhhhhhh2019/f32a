@@ -1,9 +1,11 @@
 module control_unit(input wire clk,
-                    input wire rst);
+                    input wire rst,
+                    input wire [31:0] mem_in,
+                    output reg [31:0] mem_out,
+                    output reg [31:0] mem_address);
    reg [31:0] A, B;
    reg [31:0] pc;
-   reg [31:0] T, S, R;
-   reg [29:0] dsp, rsp;
+   reg [31:0] T, S, R, dsp, rsp;
    reg [7:0]  cmd;
    reg [8:0]  mc;
    reg        carry, eam;
@@ -63,6 +65,8 @@ module control_unit(input wire clk,
    wire [31:0] ALU_result;
    wire        new_carry;
 
+   reg [31:0]  bus;
+
    ALU alu(.a(ALU1_input),
            .b(ALU2_input),
            .result(ALU_result),
@@ -85,6 +89,21 @@ module control_unit(input wire clk,
         2'd2: ALU2_input = S;
         2'd3: ALU2_input = 32'd0;
       endcase
+
+      case (m_bus_input_mux_reg)
+        4'd0: bus = 0;
+        4'd1: bus = 1;
+        4'd2: bus = A;
+        4'd3: bus = B;
+        4'd4: bus = dsp;
+        4'd5: bus = mem_in;
+        4'd6: bus = pc;
+        4'd7: bus = R;
+        4'd8: bus = rsp;
+        4'd9: bus = S;
+        4'd10: bus = T;
+        default: bus = 0;
+      endcase
    end
 
    always_ff @(posedge clk or posedge rst) begin
@@ -105,6 +124,25 @@ module control_unit(input wire clk,
                 2'd1: B <= ALU_result;
                 2'd2: T <= ALU_result;
                 2'd3: R <= ALU_result;
+              endcase
+
+              carry <= new_carry;
+           end
+           2'b01: begin
+              case (m_bus_output_mux_reg)
+                4'd0: A <= bus;
+                4'd1: A[31] <= bus[0];
+                4'd2: B <= bus;
+                4'd3: carry <= bus[0];
+                4'd4: cmd <= bus[7:0];
+                4'd5: eam <= bus[0];
+                4'd6: mem_address <= bus;
+                4'd7: mem_out <= bus;
+                4'd8: pc <= bus;
+                4'd9: R <= bus;
+                4'd10: S <= bus;
+                4'd11: T <= bus;
+                default:;
               endcase
            end
            default:;
