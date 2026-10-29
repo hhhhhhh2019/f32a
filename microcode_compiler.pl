@@ -2,25 +2,34 @@ use strict;
 use warnings;
 use utf8;
 
-my %ALU1_regs = {
-    A => 0,
-    R => 1,
-    T => 2,
-};
+my %ALU1_regs = (
+    "A" => 0,
+    "R" => 1,
+    "T" => 2,
+);
 
-my %ALU2_regs = {
+my %ALU2_regs = (
     "1" => 0,
-    "-1" => -1,
+    "-1" => 1,
     "S" => 2,
-};
+);
 
-my %ALU_output_regs = {
+my %ALU_output_regs = (
     "A" => 0,
     "B" => 1,
     "T" => 2,
-};
+);
 
-my %bus_input_regs = {
+my %ALU_op = (
+    "+" => 0,
+    "&" => 1,
+    "^" => 2,
+    ">>" => 3,
+    "<<" => 4,
+    "~" => 5,
+);
+
+my %bus_input_regs = (
     "0" => 0,
     "1" => 1,
     "A" => 2,
@@ -32,9 +41,9 @@ my %bus_input_regs = {
     "rsp" => 8,
     "S" => 9,
     "T" => 10,
-};
+);
 
-my %bus_output_regs = {
+my %bus_output_regs = (
     "A" => 0,
     "A[31]" => 1,
     "B" => 2,
@@ -47,7 +56,13 @@ my %bus_output_regs = {
     "R" => 9,
     "S" => 10,
     "T" => 11,
-};
+);
+
+my %goto_mux_reg = (
+    "A" => 0,
+    "R" => 1,
+    "T" => 2,
+);
 
 my @microcode_lines;
 my %opcodes;
@@ -76,8 +91,13 @@ while (my $line = <>) {
 
         $mc = $mc + 1;
 
-        print $line;
+        push @microcode_lines, $line;
     }
+}
+
+foreach my $mc (0 .. $#microcode_lines) {
+    my $line = $microcode_lines[$mc];
+    print $line;
 }
 
 # print $mc . "\n";
