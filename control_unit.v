@@ -80,6 +80,9 @@ module control_unit(input wire clk,
    assign mem_read = m_type == 2'b10 && m_mem_read;
    assign mem_write = m_type == 2'b10 && m_mem_write;
 
+   reg [31:0] goto_reg;
+   wire       goto_cond = (goto_reg & m_goto_mask) == 0;
+
    always_comb begin
       case (m_ALU1_mux_reg)
         2'd0: ALU1_input = A;
@@ -108,6 +111,13 @@ module control_unit(input wire clk,
         4'd9: bus = S;
         4'd10: bus = T;
         default: bus = 0;
+      endcase
+
+      case (m_goto_mux_reg)
+        2'd0: goto_reg = A;
+        2'd1: goto_reg = R;
+        2'd2: goto_reg = T;
+        default: goto_reg = 0;
       endcase
    end
 
@@ -169,7 +179,12 @@ module control_unit(input wire clk,
                 default:;
               endcase
            end
-           default:;
+           2'b11: begin
+              if (m_goto_cmd)
+                mc <= cmd_mc;
+              else if (goto_cond)
+                mc <= m_goto_address;
+           end
          endcase
       end
    end
