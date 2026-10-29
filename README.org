@@ -1,0 +1,645 @@
+это verilog реализация процессора на архитектуре f32a.
+
+* ISA
+процессор это 32-х битный, стековый.
+имеются 2 регистра: A, B и 2 стека data stack и return stack.
+
+вершина и 2 элемент data stack будут далее обозначатся за T и S соответсвнно.
+вершина return stack будет обозначаться как R.
+
+** Инструкции
+*** <value>
+dataStack.push(<value>)
+
+* Микрокод
+разделяется на 4 типа: переходы, инкремент/декремент, перенос данных, работа с памятью.
+тип микрокода определяется по 2 младшим битам.
+
+все номера регистров одинаковы для всех микрокодов. могут иметь одинаковые номера так как не встречаются одновременно ни в одном микрокоде.
+
+- 000: 0
+- 001:
+- 010:
+- 011:
+- 100:
+- 101:
+- 110:
+- 111:
+
+** 00 переходы
+{n’адрес, 32’маска, 3’регистр}
+
+если значение регистра, выбраного соотвествующим параметром, дает 0 после применения ‘и’ маски, в mc записывается адрес, указанный в микрокоде.
+
+** 01 инкремент/декремент
+{2’m_offset_pc, 2’m_offset_dps, 2’m_offset_rsp}
+
+m_offset_pc:
+- 00: ничего не делает
+- 01: +1
+- 10: +4
+
+m_offset_dsp:
+- 00: ничего не делает
+- 01: +4
+- 10: -4
+
+m_offset_rsp:
+- 00: ничего не делает
+- 01: +4
+- 10: -4
+
+** 10 перенос данных
+{3’mux_reg_input, 3’mux_reg_output}
+
+* Инструкции
+** <value>
+dataStack.push(<value>)
+
+#+begin_src text
+  clear_carry
+
+  mem_out <- S
+  dsp -= 4
+  mem_address <- dsp
+  mem_write
+  S <- T
+
+  mem_address <- pc
+  mem_read
+  T <- mem_in
+  pc += 4
+
+  goto ifetch
+#+end_src
+
+** @p <address>
+dataStack.push(mem[<address>])
+
+#+begin_src text
+  clear_carry
+
+  mem_out <- S
+  dsp -= 4
+  mem_address <- dsp
+  mem_write
+  S <- T
+
+  mem_address <- pc
+  mem_read
+  pc += 4
+
+  mem_address <- mem_in
+  mem_read
+  T <- mem_in
+
+  goto ifetch
+#+end_src
+
+** @
+dataStack.push(mem[A])
+
+#+begin_src text
+  clear_carry
+
+  mem_out <- S
+  dsp -= 4
+  mem_address <- dsp
+  mem_write
+  S <- T
+
+  mem_address <- A
+  mem_read
+  T <- mem_in
+
+  goto ifetch
+#+end_src
+
+** @+
+dataStack.push(mem[A]); A <- A + 1
+
+#+begin_src text
+  clear_carry
+
+  mem_out <- S
+  dsp -= 4
+  mem_address <- dsp
+  mem_write
+  S <- T
+
+  mem_address <- A
+  mem_read
+  T <- mem_in
+
+  ALU <- A; ALU <- 1; +; A <- ALU
+  clear_carry
+
+  goto ifetch
+#+end_src
+
+** @b
+dataStack.push(mem[B])
+
+#+begin_src text
+  clear_carry
+
+  mem_out <- S
+  dsp -= 4
+  mem_address <- dsp
+  mem_write
+  S <- T
+
+  mem_address <- B
+  mem_read
+  T <- mem_in
+
+  goto ifetch
+#+end_src
+
+** !p <address>
+mem[<address>] = dataStack.pop()
+
+#+begin_src text
+  clear_carry
+
+  mem_address <- pc
+  mem_read
+  pc += 4
+
+  mem_out <- T
+  mem_address <- mem_in
+  mem_write
+
+  T <- S
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  goto ifetch
+#+end_src
+
+** !
+mem[A] <- dataStack.pop()
+
+#+begin_src text
+  clear_carry
+
+  mem_out <- T
+  mem_address <- A
+  mem_write
+
+  T <- S
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  goto ifetch
+#+end_src
+
+** !+
+mem[A] <- dataStack.pop(); A <- A + 1
+
+#+begin_src text
+  clear_carry
+
+  mem_out <- T
+  mem_address <- A
+  mem_write
+
+  T <- S
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  ALU <- A; ALU <- 1; +; A <- ALU
+  clear_carry
+
+  goto ifetch
+#+end_src
+
+** !b
+mem[B] <- dataStack.pop()
+
+#+begin_src text
+  mem_out <- T
+  mem_address <- B
+  mem_write
+
+  T <- S
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  goto ifetch
+#+end_src
+
+** a!
+A <- dataStack.pop()
+
+#+begin_src text
+  clear_carry
+
+  A <- T
+
+  T <- S
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  goto ifetch
+#+end_src
+
+** b!
+B <- dataStack.pop()
+
+#+begin_src text
+  clear_carry
+
+  B <- T
+
+  T <- S
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  goto ifetch
+#+end_src
+
+** a
+dataStack.push(A)
+
+#+begin_src text
+  clear_carry
+
+  dsp -= 4
+  mem_out <- S
+  mem_address <- dsp
+  mem_write
+
+  S <- T
+  T <- A
+
+  goto ifetch
+#+end_src
+
+** +
+dataStack.push(dataStack.pop() + dataStack.pop() + carry&eam)
+
+#+begin_src text
+  ALU <- T; ALU <- S; +; T <- ALU
+
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  goto ifetch
+#+end_src
+
+** +*
+T <- T + (if A[0] then S else 0); A <- A >> 1; if T[0] then A[31] <- 1 else A[31] <- 0; T <- T >> 1
+
+#+begin_src text
+  clear_carry
+
+  if A[0] == 0; goto +*_shift_a
+  ALU <- T; ALU <- S; +; T <- ALU
+  clear_carry
+
+  +*_shift_a:
+  ALU <- A; >>; A <- ALU
+  A[31] <- 0
+
+  if T[0] == 0; goto +*_shift_t
+  A[31] <- 1
+
+  +*_shift_t:
+  ALU <- T; >>; T <- ALU
+
+  goto ifetch
+#+end_src
+
+** TODO +/
+
+** 2*
+dataStack.push(dataStack.pop() << 1)
+
+#+begin_src text
+  clear_carry
+  ALU <- T; <<; T <- ALU
+
+  goto ifetch
+#+end_src
+
+** 2/
+dataStack.push(dataStack.pop() >> 1)
+
+#+begin_src text
+  clear_carry
+  ALU <- T; >>; T <- ALU
+
+  goto ifetch
+#+end_src
+
+** inv
+dataStack.push(~dataStack.pop())
+
+#+begin_src text
+  clear_carry
+  ALU <- T; ~; T <- ALU
+
+  goto ifetch
+#+end_src
+
+** eam
+eam <- dataStack.pop()
+
+#+begin_src text
+  clear_carry
+  eam <- T
+
+  T <- S
+
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  goto ifetch
+#+end_src
+
+** and
+dataStack.push(dataStack.pop() & dataStack.pop())
+
+#+begin_src text
+  clear_carry
+  ALU <- T; ALU <- S; &; T <- ALU
+
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  goto ifetch
+#+end_src
+
+** xor
+dataStack.push(dataStack.pop() ^ dataStack.pop())
+
+#+begin_src text
+  clear_carry
+  ALU <- T; ALU <- S; ^; T <- ALU
+
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  goto ifetch
+#+end_src
+
+** drop
+dataStack.pop()
+
+#+begin_src text
+  clear_carry
+
+  T <- S
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  goto ifetch
+#+end_src
+
+** dup
+dataStack.push(dataStack.top()), carry flag does not change
+
+#+begin_src text
+  clear_carry
+
+  dsp -= 4
+  mem_out <- S
+  mem_address <- dsp
+  mem_write
+
+  S <- T
+
+  goto ifetch
+#+end_src
+
+** over
+T <- dataStack.pop(); S <- dataStack.pop(); dataStack.push(S); dataStack.push(T); dataStack.push(S)
+
+#+begin_src text
+  clear_carry
+
+  dsp -= 4
+  mem_out <- S
+  mem_address <- dsp
+  mem_write
+
+  S <- T
+
+  mem_read
+  T <- mem_in
+
+  goto ifetch
+#+end_src
+
+** ;
+p <- returnStack.pop()
+
+#+begin_src text
+  clear_carry
+
+  pc <- T
+  T <- S
+
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+
+  dsp += 4
+
+  goto ifetch
+#+end_src
+
+** <label>
+returnStack.push(p); p <- <label>
+
+#+begin_src text
+  clear_carry
+
+  rsp -= 4
+  mem_out <- R
+  mem_address <- rsp
+  mem_write
+
+  mem_address <- pc
+  mem_read
+
+  pc += 4
+  R <- pc
+  pc <- mem_in
+
+  goto ifetch
+#+end_src
+
+** <label> ;
+p <- <label>
+
+#+begin_src text
+  clear_carry
+
+  mem_address <- pc
+  mem_read
+
+  pc <- mem_in
+
+  goto ifetch
+#+end_src
+
+** next <label>
+if R != 0 then
+    R <- R - 1
+    p <- <label>
+else returnStack.pop()
+
+#+begin_src text
+  clear_carry
+
+  if R == 0; goto next_return
+  ALU <- R; ALU <- -1; +; R <- ALU
+
+  mem_address <- pc
+  mem_read
+  pc <- mem_in
+
+  goto ifetch
+
+  next_return:
+  mem_address <- rsp
+  mem_read
+  R <- mem_in
+  rsp += 4
+
+  goto ifetch
+#+end_src
+
+** if <label>
+if dataStack.pop() == 0 then p <- <label>
+
+#+begin_src text
+  clear_carry
+
+  if T == 0; goto if_goto
+
+  T <- S
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  pc += 4
+
+  goto ifetch
+
+  if_goto:
+  T <- S
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  mem_address <- pc
+  mem_read
+  pc <- mem_in
+
+  goto ifetch
+#+end_src
+
+** -if <label>
+if dataStack.pop() >= 0 then p <- <label>
+
+#+begin_src text
+  clear_carry
+
+  if T[31] == 0; goto -if_goto
+
+  T <- S
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  pc += 4
+
+  goto ifetch
+
+  if_goto:
+  T <- S
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  mem_address <- pc
+  mem_read
+  pc <- mem_in
+
+  goto ifetch
+#+end_src
+
+** TODO halt
+
+** r>
+dataStack.push(returnStack.pop())
+
+#+begin_src text
+  clear_carry
+
+  dsp -= 4
+  mem_out <- S
+  mem_address <- dsp
+  mem_write
+
+  S <- T
+  T <- R
+
+  mem_address <- rsp
+  mem_read
+  R <- mem_in
+  rsp += 4
+
+  goto ifetch
+#+end_src
+
+** >r
+returnStack.push(dataStack.pop())
+
+#+begin_src text
+  clear_carry
+
+  rsp -= 4
+  mem_out <- R
+  mem_address <- rsp
+  mem_write
+
+  R <- T
+
+  T <- S
+  mem_address <- dsp
+  mem_read
+  S <- mem_in
+  dsp += 4
+
+  goto ifetch
+#+end_src
