@@ -7,10 +7,7 @@
 вершина и 2 элемент data stack будут далее обозначатся за T и S соответсвнно.
 вершина return stack будет обозначаться как R.
 
-** Инструкции
-*** <value>
-dataStack.push(<value>)
-
+Список инструкций, их действие и реализацию вы можете найти в секции [[Инструкции]]
 * Микрокод
 разделяется на 4 типа: переходы, инкремент/декремент, перенос данных, работа с памятью.
 тип микрокода определяется по 2 младшим битам.
@@ -53,10 +50,20 @@ m_offset_rsp:
 {3’mux_reg_input, 3’mux_reg_output}
 
 * Инструкции
-** <value>
+#+begin_src text
+  ifetch:
+  mem_address <- pc
+  mem_read
+
+  cmd <- mem_in
+
+  goto cmd
+#+end_src
+
+** literal <value>
 dataStack.push(<value>)
 
-#+begin_src text
+#+begin_src text :opcode lit
   clear_carry
 
   mem_out <- S
@@ -73,10 +80,10 @@ dataStack.push(<value>)
   goto ifetch
 #+end_src
 
-** @p <address>
+** fetch from address. @p <address>
 dataStack.push(mem[<address>])
 
-#+begin_src text
+#+begin_src text :opcode fetch_addr
   clear_carry
 
   mem_out <- S
@@ -96,10 +103,10 @@ dataStack.push(mem[<address>])
   goto ifetch
 #+end_src
 
-** @
+** fetch. @
 dataStack.push(mem[A])
 
-#+begin_src text
+#+begin_src text :opcode fetch
   clear_carry
 
   mem_out <- S
@@ -115,10 +122,10 @@ dataStack.push(mem[A])
   goto ifetch
 #+end_src
 
-** @+
+** fetch plus. @+
 dataStack.push(mem[A]); A <- A + 1
 
-#+begin_src text
+#+begin_src text :opcode fetch_plus
   clear_carry
 
   mem_out <- S
@@ -137,10 +144,10 @@ dataStack.push(mem[A]); A <- A + 1
   goto ifetch
 #+end_src
 
-** @b
+** fetch B. @b
 dataStack.push(mem[B])
 
-#+begin_src text
+#+begin_src text :opcode fetch_b
   clear_carry
 
   mem_out <- S
@@ -156,10 +163,10 @@ dataStack.push(mem[B])
   goto ifetch
 #+end_src
 
-** !p <address>
+** store to address. !p <address>
 mem[<address>] = dataStack.pop()
 
-#+begin_src text
+#+begin_src text :opcode store_addr
   clear_carry
 
   mem_address <- pc
@@ -179,10 +186,10 @@ mem[<address>] = dataStack.pop()
   goto ifetch
 #+end_src
 
-** !
+** store. !
 mem[A] <- dataStack.pop()
 
-#+begin_src text
+#+begin_src text :opcode store
   clear_carry
 
   mem_out <- T
@@ -198,10 +205,10 @@ mem[A] <- dataStack.pop()
   goto ifetch
 #+end_src
 
-** !+
+** store plus. !+
 mem[A] <- dataStack.pop(); A <- A + 1
 
-#+begin_src text
+#+begin_src text :opcode store_plus
   clear_carry
 
   mem_out <- T
@@ -220,10 +227,10 @@ mem[A] <- dataStack.pop(); A <- A + 1
   goto ifetch
 #+end_src
 
-** !b
+** store B. !b
 mem[B] <- dataStack.pop()
 
-#+begin_src text
+#+begin_src text :opcode store_b
   mem_out <- T
   mem_address <- B
   mem_write
@@ -237,10 +244,10 @@ mem[B] <- dataStack.pop()
   goto ifetch
 #+end_src
 
-** a!
+** A-store. a!
 A <- dataStack.pop()
 
-#+begin_src text
+#+begin_src text :opcode a_store
   clear_carry
 
   A <- T
@@ -254,10 +261,10 @@ A <- dataStack.pop()
   goto ifetch
 #+end_src
 
-** b!
+** B-store. b!
 B <- dataStack.pop()
 
-#+begin_src text
+#+begin_src text :opcode b_store
   clear_carry
 
   B <- T
@@ -271,10 +278,10 @@ B <- dataStack.pop()
   goto ifetch
 #+end_src
 
-** a
+** A-fetch. a
 dataStack.push(A)
 
-#+begin_src text
+#+begin_src text :opcode a_fetch
   clear_carry
 
   dsp -= 4
@@ -288,10 +295,10 @@ dataStack.push(A)
   goto ifetch
 #+end_src
 
-** +
+** add. +
 dataStack.push(dataStack.pop() + dataStack.pop() + carry&eam)
 
-#+begin_src text
+#+begin_src text :opcode add
   ALU <- T; ALU <- S; +; T <- ALU
 
   mem_address <- dsp
@@ -302,10 +309,10 @@ dataStack.push(dataStack.pop() + dataStack.pop() + carry&eam)
   goto ifetch
 #+end_src
 
-** +*
+** multiply step. +*
 T <- T + (if A[0] then S else 0); A <- A >> 1; if T[0] then A[31] <- 1 else A[31] <- 0; T <- T >> 1
 
-#+begin_src text
+#+begin_src text :opcode mul_step
   clear_carry
 
   if A[0] == 0; goto +*_shift_a
@@ -327,40 +334,40 @@ T <- T + (if A[0] then S else 0); A <- A >> 1; if T[0] then A[31] <- 1 else A[31
 
 ** TODO +/
 
-** 2*
+** left shift. 2*
 dataStack.push(dataStack.pop() << 1)
 
-#+begin_src text
+#+begin_src text :opcode left_shift
   clear_carry
   ALU <- T; <<; T <- ALU
 
   goto ifetch
 #+end_src
 
-** 2/
+** right shift. 2/
 dataStack.push(dataStack.pop() >> 1)
 
-#+begin_src text
+#+begin_src text :opcode right_shift
   clear_carry
   ALU <- T; >>; T <- ALU
 
   goto ifetch
 #+end_src
 
-** inv
+** binary invert. inv
 dataStack.push(~dataStack.pop())
 
-#+begin_src text
+#+begin_src text :opcode inv
   clear_carry
   ALU <- T; ~; T <- ALU
 
   goto ifetch
 #+end_src
 
-** eam
+** Extend Arithmetic Instructions. eam
 eam <- dataStack.pop()
 
-#+begin_src text
+#+begin_src text :opcode eam
   clear_carry
   eam <- T
 
@@ -374,10 +381,10 @@ eam <- dataStack.pop()
   goto ifetch
 #+end_src
 
-** and
+** bitwise and. and
 dataStack.push(dataStack.pop() & dataStack.pop())
 
-#+begin_src text
+#+begin_src text :opcode and
   clear_carry
   ALU <- T; ALU <- S; &; T <- ALU
 
@@ -389,10 +396,10 @@ dataStack.push(dataStack.pop() & dataStack.pop())
   goto ifetch
 #+end_src
 
-** xor
+** bitwise xor. xor
 dataStack.push(dataStack.pop() ^ dataStack.pop())
 
-#+begin_src text
+#+begin_src text :opcode xor
   clear_carry
   ALU <- T; ALU <- S; ^; T <- ALU
 
@@ -404,10 +411,10 @@ dataStack.push(dataStack.pop() ^ dataStack.pop())
   goto ifetch
 #+end_src
 
-** drop
+** drop. drop
 dataStack.pop()
 
-#+begin_src text
+#+begin_src text :opcode drop
   clear_carry
 
   T <- S
@@ -419,10 +426,10 @@ dataStack.pop()
   goto ifetch
 #+end_src
 
-** dup
+** dup. dup
 dataStack.push(dataStack.top()), carry flag does not change
 
-#+begin_src text
+#+begin_src text :opcode dup
   clear_carry
 
   dsp -= 4
@@ -435,10 +442,10 @@ dataStack.push(dataStack.top()), carry flag does not change
   goto ifetch
 #+end_src
 
-** over
+** over. over
 T <- dataStack.pop(); S <- dataStack.pop(); dataStack.push(S); dataStack.push(T); dataStack.push(S)
 
-#+begin_src text
+#+begin_src text :opcode over
   clear_carry
 
   dsp -= 4
@@ -454,10 +461,10 @@ T <- dataStack.pop(); S <- dataStack.pop(); dataStack.push(S); dataStack.push(T)
   goto ifetch
 #+end_src
 
-** ;
+** return. ;
 p <- returnStack.pop()
 
-#+begin_src text
+#+begin_src text :opcode return
   clear_carry
 
   pc <- T
@@ -472,10 +479,10 @@ p <- returnStack.pop()
   goto ifetch
 #+end_src
 
-** <label>
+** call. <label>
 returnStack.push(p); p <- <label>
 
-#+begin_src text
+#+begin_src text :opcode call
   clear_carry
 
   rsp -= 4
@@ -493,10 +500,10 @@ returnStack.push(p); p <- <label>
   goto ifetch
 #+end_src
 
-** <label> ;
+** jump. <label> ;
 p <- <label>
 
-#+begin_src text
+#+begin_src text :opcode jump
   clear_carry
 
   mem_address <- pc
@@ -507,13 +514,13 @@ p <- <label>
   goto ifetch
 #+end_src
 
-** next <label>
+** next. next <label>
 if R != 0 then
     R <- R - 1
     p <- <label>
 else returnStack.pop()
 
-#+begin_src text
+#+begin_src text :opcode next
   clear_carry
 
   if R == 0; goto next_return
@@ -534,10 +541,10 @@ else returnStack.pop()
   goto ifetch
 #+end_src
 
-** if <label>
+** if zero. if <label>
 if dataStack.pop() == 0 then p <- <label>
 
-#+begin_src text
+#+begin_src text :opcode if
   clear_carry
 
   if T == 0; goto if_goto
@@ -566,10 +573,10 @@ if dataStack.pop() == 0 then p <- <label>
   goto ifetch
 #+end_src
 
-** -if <label>
+** if non negative. -if <label>
 if dataStack.pop() >= 0 then p <- <label>
 
-#+begin_src text
+#+begin_src text :opcode -if
   clear_carry
 
   if T[31] == 0; goto -if_goto
@@ -600,10 +607,10 @@ if dataStack.pop() >= 0 then p <- <label>
 
 ** TODO halt
 
-** r>
+** RIntoT. r>
 dataStack.push(returnStack.pop())
 
-#+begin_src text
+#+begin_src text :opcode r>
   clear_carry
 
   dsp -= 4
@@ -622,10 +629,10 @@ dataStack.push(returnStack.pop())
   goto ifetch
 #+end_src
 
-** >r
+** TIntoR. >r
 returnStack.push(dataStack.pop())
 
-#+begin_src text
+#+begin_src text :opcode >r
   clear_carry
 
   rsp -= 4
