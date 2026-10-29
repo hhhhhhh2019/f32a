@@ -22,9 +22,9 @@ module control_unit(input wire clk,
    reg [3:0]  m_bus_input_mux_reg;
    reg [3:0]  m_bus_output_mux_reg;
 
-   reg [2:0]  m_pc_offset;
-   reg [2:0]  m_dsp_offset;
-   reg [2:0]  m_rsp_offset;
+   reg [1:0]  m_pc_offset;
+   reg [1:0]  m_dsp_offset;
+   reg [1:0]  m_rsp_offset;
    reg        m_mem_read;
    reg        m_mem_write;
 
@@ -117,6 +117,8 @@ module control_unit(input wire clk,
          dsp <= 'h1000;
          rsp <= 'h2000;
       end else begin
+         mc <= mc + 1;
+
          case (m_type)
            2'b00: begin
               case (m_ALU_output_mux_reg)
@@ -142,6 +144,23 @@ module control_unit(input wire clk,
                 4'd9: R <= bus;
                 4'd10: S <= bus;
                 4'd11: T <= bus;
+                default:;
+              endcase
+           end
+           2'b10: begin
+              case (m_pc_offset)
+                2'd1: pc <= pc + 1;
+                2'd2: pc <= pc + 4;
+                default:;
+              endcase
+              case (m_dsp_offset)
+                2'd1: dsp <= dsp + 4;
+                2'd2: dsp <= dsp - 4;
+                default:;
+              endcase
+              case (m_rsp_offset)
+                2'd1: rsp <= rsp + 4;
+                2'd2: rsp <= rsp - 4;
                 default:;
               endcase
            end

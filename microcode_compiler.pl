@@ -206,7 +206,7 @@ sub parse_offset ($line, $mc) {
     $m_mem_read = 1 if ($line =~ s/mem_read//);
     $m_mem_write = 1 if ($line =~ s/mem_write//);
 
-    print "rom[$mc] = {3'd$m_pc_offset, 3'd$m_dsp_offset, 3'd$m_rsp_offset, 1'd$m_mem_read, 1'd$m_mem_write, 2'b10};\n";
+    print "rom[$mc] = {2'd$m_pc_offset, 2'd$m_dsp_offset, 2'd$m_rsp_offset, 1'd$m_mem_read, 1'd$m_mem_write, 2'b10};\n";
 }
 
 sub parse_goto ($line, $mc) {
