@@ -19,6 +19,7 @@
 
         iverilog
         gtkwave
+        xdot
       ];
     };
   });

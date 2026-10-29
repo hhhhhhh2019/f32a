@@ -22,7 +22,7 @@ ALU1 op ALU2 -> ALU_output
 ALU1_mux_reg:
  0 - A
  1 - R
- 2 - R
+ 2 - T
 
 ALU2_mux_reg:
  0 - 1
