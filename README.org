@@ -36,9 +36,9 @@ bus_input -> bus_output
 если ALU_op = +, то устанавливаем carry
 
 ALU1_mux_reg:
- - 0 :: A
- - 1 :: R
- - 2 :: T
+ - 0 - A
+ - 1 - R
+ - 2 - T
 
 ALU2_mux_reg:
  0 - 1
