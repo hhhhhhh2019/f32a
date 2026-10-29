@@ -36,80 +36,80 @@ bus_input -> bus_output
 если ALU_op = +, то устанавливаем carry
 
 ALU1_mux_reg:
- - 0 - A
- - 1 - R
- - 2 - T
+ - 0: A
+ - 1: R
+ - 2: T
 
 ALU2_mux_reg:
- - 0 - 1
- - 1 - -1
- - 2 - S
+ - 0: 1
+ - 1: -1
+ - 2: S
 
 ALU_op:
- - 0 - +
- - 1 - &
- - 2 - ^
- - 3 - >>
- - 4 - <<
- - 5 - ~
+ - 0: +
+ - 1: &
+ - 2: ^
+ - 3: >>
+ - 4: <<
+ - 5: ~
 
 bus_input_mux_reg:
-  - 0 - 0
-  - 1 - 1
-  - 2 - A
-  - 3 - B
-  - 4 - dsp
-  - 5 - mem_in
-  - 6 - pc
-  - 7 - R
-  - 8 - rsp
-  - 9 - S
- - 10 - T
- - 11 - ALU
+  - 0: 0
+  - 1: 1
+  - 2: A
+  - 3: B
+  - 4: dsp
+  - 5: mem_in
+  - 6: pc
+  - 7: R
+  - 8: rsp
+  - 9: S
+ - 10: T
+ - 11: ALU
 
 bus_output_mux_reg:
-  - 0 - A
-  - 1 - A[31]
-  - 2 - B
-  - 3 - carry
-  - 4 - cmd
-  - 5 - eam
-  - 6 - mem_address
-  - 7 - mem_out
-  - 8 - pc
-  - 9 - R
- - 10 - S
- - 11 - T
+  - 0: A
+  - 1: A[31]
+  - 2: B
+  - 3: carry
+  - 4: cmd
+  - 5: eam
+  - 6: mem_address
+  - 7: mem_out
+  - 8: pc
+  - 9: R
+ - 10: S
+ - 11: T
 
 ** 01
 {2'pc_offset, 2'dsp_offset, 2'rsp_offset, 1'mem_read, 1'mem_write}
 
 pc_offset:
- 0: ничего
- 1: +1
- 2: +4
+ - 0: ничего
+ - 1: +1
+ - 2: +4
 
 dsp_offset:
- 0: ничего
- 1: +4
- 2: -4
+ - 0: ничего
+ - 1: +4
+ - 2: -4
 
 rsp_offset:
- 0: ничего
- 1: +4
- 2: -4
+ - 0: ничего
+ - 1: +4
+ - 2: -4
 
 ** 10
 {9'goto_address, 2'goto_mux_reg, 32'goto_mask, 1'goto_cmd}
 
 goto_mux_reg:
- 0 - A
- 1 - R
- 2 - T
+ - 0: A
+ - 1: R
+ - 2: T
 
 goto_cmd:
- 0 - переход на адрес из goto_address
- 1 - переход на адрес из opcodes[cmd]
+ - 0: переход на адрес из goto_address
+ - 1: переход на адрес из opcodes[cmd]
 
 * Инструкции
 #+begin_src text
