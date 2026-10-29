@@ -187,7 +187,7 @@ sub parse_move ($line, $mc) {
         $m_bus_output_mux_reg = $bus_output_regs{$+{A}};
     }
 
-    print "rom[$mc] = {4'd$m_bus_input_mux_reg, 4'd$m_bus_output_mux_reg, 2b01};\n";
+    print "rom[$mc] = {4'd$m_bus_input_mux_reg, 4'd$m_bus_output_mux_reg, 2'b01};\n";
 }
 
 sub parse_offset ($line, $mc) {
