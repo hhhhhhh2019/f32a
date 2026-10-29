@@ -1,5 +1,12 @@
 это verilog реализация процессора на архитектуре f32a.
 
+* Как запускать
+Для симуляции я использую iverlog и gtkwave.
+Запускаю так: src_sh{iverilog -g2012 -o sim.vvp f32a.v control_unit.v RAM.v ALU.v microcode.v simulation.v && vvp sim.vvp && gtkwave simulation.vcd}
+
+Для синтеза схемы использую yosys + netlistsvg, но, к сожалению, схема не получается до тупости простой.
+src_sh{yosys -p 'read_verilog -sv "control_unit.v" "microcode.v" "ALU.v"; hierarchy -check -top control_unit; proc; write_json output.json' && netlistsvg -o output.svg output.json}
+
 * ISA
 процессор это 32-х битный, стековый.
 имеются 2 регистра: A, B и 2 стека data stack и return stack.
