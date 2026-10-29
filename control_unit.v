@@ -18,9 +18,7 @@ module control_unit(input wire          clk,
 
    logic [1:0]  m_ALU1_mux_reg;
    logic [1:0]  m_ALU2_mux_reg;
-   logic [1:0]  m_ALU_output_mux_reg;
    logic [2:0]  m_ALU_op;
-
    logic [3:0]  m_bus_input_mux_reg;
    logic [3:0]  m_bus_output_mux_reg;
 
@@ -45,7 +43,6 @@ module control_unit(input wire          clk,
 
                        .m_ALU1_mux_reg(m_ALU1_mux_reg),
                        .m_ALU2_mux_reg(m_ALU2_mux_reg),
-                       .m_ALU_output_mux_reg(m_ALU_output_mux_reg),
                        .m_ALU_op(m_ALU_op),
 
                        .m_bus_input_mux_reg(m_bus_input_mux_reg),
@@ -77,8 +74,8 @@ module control_unit(input wire          clk,
            .new_carry(new_carry),
            .eam(eam));
 
-   assign mem_read = m_type == 2'b10 && m_mem_read;
-   assign mem_write = m_type == 2'b10 && m_mem_write;
+   assign mem_read = m_type == 2'b01 && m_mem_read;
+   assign mem_write = m_type == 2'b01 && m_mem_write;
 
    logic [31:0] goto_reg;
    wire         goto_cond = (goto_reg & m_goto_mask) == 0;
@@ -93,7 +90,7 @@ module control_unit(input wire          clk,
 
       case (m_ALU2_mux_reg)
         2'd0: ALU2_input = 32'd1;
-        2'd1: ALU2_input = 32'd1;
+        2'd1: ALU2_input = -32'd1;
         2'd2: ALU2_input = S;
         2'd3: ALU2_input = 32'd0;
       endcase
@@ -110,6 +107,7 @@ module control_unit(input wire          clk,
         4'd8: bus = rsp;
         4'd9: bus = S;
         4'd10: bus = T;
+        4'd11: bus = ALU_result;
         default: bus = 0;
       endcase
 
@@ -131,21 +129,19 @@ module control_unit(input wire          clk,
          pc <= 'h0000;
          dsp <= 'h1000;
          rsp <= 'h2000;
+         mc <= '0;
+         carry <= '0;
+         eam <= '0;
+         mem_address <= '0;
+         mem_out <= '0;
+         cmd <= '0;
       end else begin
          mc <= mc + 1;
 
          case (m_type)
            2'b00: begin
-              case (m_ALU_output_mux_reg)
-                2'd0: A <= ALU_result;
-                2'd1: B <= ALU_result;
-                2'd2: T <= ALU_result;
-                2'd3: R <= ALU_result;
-              endcase
-
               carry <= new_carry;
-           end
-           2'b01: begin
+
               case (m_bus_output_mux_reg)
                 4'd0: A <= bus;
                 4'd1: A[31] <= bus[0];
@@ -162,7 +158,7 @@ module control_unit(input wire          clk,
                 default:;
               endcase
            end
-           2'b10: begin
+           2'b01: begin
               case (m_pc_offset)
                 2'd1: pc <= pc + 1;
                 2'd2: pc <= pc + 4;
@@ -179,12 +175,13 @@ module control_unit(input wire          clk,
                 default:;
               endcase
            end
-           2'b11: begin
+           2'b10: begin
               if (m_goto_cmd)
                 mc <= cmd_mc;
               else if (goto_cond)
                 mc <= m_goto_address;
            end
+           2'b11:;
          endcase
       end
    end

@@ -13,13 +13,6 @@ my %ALU2_regs = (
     "S" => 2,
 );
 
-my %ALU_output_regs = (
-    "A" => 0,
-    "B" => 1,
-    "T" => 2,
-    "R" => 3,
-);
-
 my %ALU_op = (
     "+" => 0,
     "&" => 1,
@@ -41,6 +34,7 @@ my %bus_input_regs = (
     "rsp" => 8,
     "S" => 9,
     "T" => 10,
+    "ALU" => 11,
 );
 
 my %bus_output_regs = (
@@ -132,11 +126,7 @@ while (my $line = <>) {
 foreach my $mc (0 .. $#microcode_lines) {
     my $line = $microcode_lines[$mc];
 
-    if ($line =~ /ALU/) {
-        parse_alu($line, $mc);
-    }
-
-    elsif ($line =~ /<\-/) {
+    if ($line =~ /<\-/) {
         parse_move($line, $mc);
     }
 
@@ -153,11 +143,12 @@ foreach my $mc (0 .. $#microcode_lines) {
     }
 }
 
-sub parse_alu ($line, $mc) {
-    my $m_ALU1_mux_reg;
+sub parse_move ($line, $mc) {
+    my $m_bus_input_mux_reg;
+    my $m_bus_output_mux_reg;
+    my $m_ALU1_mux_reg = 0;
     my $m_ALU2_mux_reg = 0;
-    my $m_ALU_output_mux_reg;
-    my $m_ALU_op;
+    my $m_ALU_op = 0;
 
     if ($line =~ s/ALU\s+<\-\s+(?<reg>\S+);//) {
         $m_ALU1_mux_reg = $ALU1_regs{$+{reg}};
@@ -171,23 +162,12 @@ sub parse_alu ($line, $mc) {
         $m_ALU_op = $ALU_op{$+{op}};
     }
 
-    if ($line =~ s/(?<reg>\S+)\s+<\-\s+ALU//) {
-        $m_ALU_output_mux_reg = $ALU_output_regs{$+{reg}};
-    }
-
-    print "rom[$mc] = {2'd$m_ALU1_mux_reg, 2'd$m_ALU2_mux_reg, 2'd$m_ALU_output_mux_reg, 3'd$m_ALU_op, 2'b00};\n";
-}
-
-sub parse_move ($line, $mc) {
-    my $m_bus_input_mux_reg;
-    my $m_bus_output_mux_reg;
-
     if ($line =~ s/(?<A>\S+)\s+<\-\s+(?<B>\S+)//) {
         $m_bus_input_mux_reg = $bus_input_regs{$+{B}};
         $m_bus_output_mux_reg = $bus_output_regs{$+{A}};
     }
 
-    print "rom[$mc] = {4'd$m_bus_input_mux_reg, 4'd$m_bus_output_mux_reg, 2'b01};\n";
+    print "rom[$mc] = {4'd$m_bus_input_mux_reg, 4'd$m_bus_output_mux_reg, 2'd$m_ALU1_mux_reg, 2'd$m_ALU2_mux_reg, 3'd$m_ALU_op, 2'b00};\n";
 }
 
 sub parse_offset ($line, $mc) {
@@ -206,7 +186,7 @@ sub parse_offset ($line, $mc) {
     $m_mem_read = 1 if ($line =~ s/mem_read//);
     $m_mem_write = 1 if ($line =~ s/mem_write//);
 
-    print "rom[$mc] = {2'd$m_pc_offset, 2'd$m_dsp_offset, 2'd$m_rsp_offset, 1'd$m_mem_read, 1'd$m_mem_write, 2'b10};\n";
+    print "rom[$mc] = {2'd$m_pc_offset, 2'd$m_dsp_offset, 2'd$m_rsp_offset, 1'd$m_mem_read, 1'd$m_mem_write, 2'b01};\n";
 }
 
 sub parse_goto ($line, $mc) {
@@ -225,7 +205,7 @@ sub parse_goto ($line, $mc) {
         }
     }
 
-    if ($line =~ s/if\s+(?<reg>\w+)(:?\[(:<high>\d+)(:? : (?<low>\d+))?\])?\s+==\s+0//) {
+    if ($line =~ s/if\s+(?<reg>\w+)(:?\[(?<high>\d+)(?::(?<low>\d+))?\])?\s+==\s+0//) {
         $m_goto_mux_reg = $goto_regs{$+{reg}};
 
         if (defined $+{high}) {
@@ -237,7 +217,7 @@ sub parse_goto ($line, $mc) {
         }
     }
 
-    print "rom[$mc] = {9'd$m_goto_address, 2'd$m_goto_mux_reg, 32'd$m_goto_mask, 1'd$m_goto_cmd, 2'b11};\n";
+    print "rom[$mc] = {9'd$m_goto_address, 2'd$m_goto_mux_reg, 32'd$m_goto_mask, 1'd$m_goto_cmd, 2'b10};\n";
 }
 
 foreach my $opcode (keys %opcodes_address) {

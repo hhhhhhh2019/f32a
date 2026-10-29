@@ -1,11 +1,11 @@
-module RAM#(parameter ADDR_W = 10
+module RAM#(parameter ADDR_W = 16
             )(input wire              clk,
               input wire [ADDR_W-1:0] address,
               input wire [31:0]       in,
               output reg [31:0]       out,
               input wire              read,
               input wire              write);
-   reg [7:0] ram[0:1 << ADDR_W - 1];
+   reg [7:0] ram[0:(1 << ADDR_W) - 1];
 
    initial begin
       $readmemh("ram.hex", ram);

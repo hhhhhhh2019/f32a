@@ -13,9 +13,10 @@
 тип микрокода определяется по 2 младшим битам.
 
 ** 00
-{2'ALU1_mux_reg, 2'ALU2_mux_reg, 2'ALU_output_mux_reg, 3'ALU_op}
+{4'bus_input_mux_reg, 4'bus_output_mux_reg, 2'ALU1_mux_reg, 2'ALU2_mux_reg, 3'ALU_op}
 
 ALU1 op ALU2 -> ALU_output
+bus_input -> bus_output
 
 если ALU_op = +, то устанавливаем carry
 
@@ -29,12 +30,6 @@ ALU2_mux_reg:
  1 - -1
  2 - S
 
-ALU_output_mux_reg:
- 0 - A
- 1 - B
- 2 - T
- 3 - R
-
 ALU_op:
  0 - +
  1 - &
@@ -42,11 +37,6 @@ ALU_op:
  3 - >>
  4 - <<
  5 - ~
-
-** 01
-{4'bus_input_mux_reg, 4'bus_output_mux_reg}
-
-bus_input -> bus_output
 
 bus_input_mux_reg:
   0 - 0
@@ -60,6 +50,7 @@ bus_input_mux_reg:
   8 - rsp
   9 - S
  10 - T
+ 11 - ALU
 
 bus_output_mux_reg:
   0 - A
@@ -75,8 +66,8 @@ bus_output_mux_reg:
  10 - S
  11 - T
 
-** 10
-{3'pc_offset, 3'dsp_offset, 3'rsp_offset, 1'mem_read, 1'mem_write}
+** 01
+{2'pc_offset, 2'dsp_offset, 2'rsp_offset, 1'mem_read, 1'mem_write}
 
 pc_offset:
  0: ничего
@@ -93,7 +84,7 @@ rsp_offset:
  1: +4
  2: -4
 
-** 11
+** 10
 {9'goto_address, 2'goto_mux_reg, 32'goto_mask, 1'goto_cmd}
 
 goto_mux_reg:
@@ -112,6 +103,7 @@ goto_cmd:
   mem_read
 
   cmd <- mem_in
+  pc += 1
 
   goto cmd
 #+end_src
@@ -287,6 +279,8 @@ mem[A] <- dataStack.pop(); A <- A + 1
 mem[B] <- dataStack.pop()
 
 #+begin_src text :opcode store_b
+  carry <- 0
+
   mem_out <- T
   mem_address <- B
   mem_write
@@ -522,14 +516,12 @@ p <- returnStack.pop()
 #+begin_src text :opcode return
   carry <- 0
 
-  pc <- T
-  T <- S
+  pc <- R
 
-  mem_address <- dsp
+  mem_address <- rsp
   mem_read
-  S <- mem_in
-
-  dsp += 4
+  R <- mem_in
+  rsp += 4
 
   goto ifetch
 #+end_src
