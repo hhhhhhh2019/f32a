@@ -2,10 +2,18 @@
 
 * Как запускать
 Для симуляции я использую iverlog и gtkwave.
-Запускаю так: src_sh{iverilog -g2012 -o sim.vvp f32a.v control_unit.v RAM.v ALU.v microcode.v simulation.v && vvp sim.vvp && gtkwave simulation.vcd}
+Запускаю так:
+#+begin_src sh
+  iverilog -g2012 -o sim.vvp f32a.v control_unit.v RAM.v ALU.v microcode.v simulation.v
+  vvp sim.vvp
+  gtkwave simulation.vcd
+#+end_src
 
 Для синтеза схемы использую yosys + netlistsvg, но, к сожалению, схема не получается до тупости простой.
-src_sh{yosys -p 'read_verilog -sv "control_unit.v" "microcode.v" "ALU.v"; hierarchy -check -top control_unit; proc; write_json output.json' && netlistsvg -o output.svg output.json}
+#+begin_src sh
+  yosys -p 'read_verilog -sv "control_unit.v" "microcode.v" "ALU.v"; hierarchy -check -top control_unit; proc; write_json output.json'
+  netlistsvg -o output.svg output.json
+#+end_src
 
 * ISA
 процессор это 32-х битный, стековый.
@@ -14,7 +22,7 @@ src_sh{yosys -p 'read_verilog -sv "control_unit.v" "microcode.v" "ALU.v"; hierar
 вершина и 2 элемент data stack будут далее обозначатся за T и S соответсвнно.
 вершина return stack будет обозначаться как R.
 
-Список инструкций, их действие и реализацию вы можете найти в секции [[Инструкции]]
+Список инструкций, их действие и реализацию вы можете найти в секции [[#инструкции][Инструкции]]
 * Микрокод
 разделяется на 4(на основе того откуда мы что-либо записываем).
 тип микрокода определяется по 2 младшим битам.
@@ -28,9 +36,9 @@ bus_input -> bus_output
 если ALU_op = +, то устанавливаем carry
 
 ALU1_mux_reg:
- 0 - A
- 1 - R
- 2 - T
+ - 0 :: A
+ - 1 :: R
+ - 2 :: T
 
 ALU2_mux_reg:
  0 - 1
