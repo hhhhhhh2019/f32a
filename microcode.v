@@ -1,32 +1,31 @@
-module microcode#(parameter MC_W = 9
-                  )(input wire            clk,
-                    input wire [MC_W-1:0] mc,
+module microcode(input wire        clk,
+                 input wire [8:0]  mc,
 
-                    input wire [7:0]      cmd,
-                    output reg [MC_W-1:0] cmd_mc,
+                 input wire [7:0]  cmd,
+                 output reg [8:0]  cmd_mc,
 
-                    output reg [1:0]      m_type,
+                 output reg [1:0]  m_type,
 
-                    output reg [1:0]      m_ALU1_mux_reg,
-                    output reg [1:0]      m_ALU2_mux_reg,
-                    output reg [1:0]      m_ALU_output_mux_reg,
-                    output reg [2:0]      m_ALU_op,
+                 output reg [1:0]  m_ALU1_mux_reg,
+                 output reg [1:0]  m_ALU2_mux_reg,
+                 output reg [1:0]  m_ALU_output_mux_reg,
+                 output reg [2:0]  m_ALU_op,
 
-                    output reg [3:0]      m_bus_input_mux_reg,
-                    output reg [3:0]      m_bus_output_mux_reg,
+                 output reg [3:0]  m_bus_input_mux_reg,
+                 output reg [3:0]  m_bus_output_mux_reg,
 
-                    output reg [2:0]      m_pc_offset,
-                    output reg [2:0]      m_dsp_offset,
-                    output reg [2:0]      m_rsp_offset,
-                    output reg            m_mem_read,
-                    output reg            m_mem_write,
+                 output reg [2:0]  m_pc_offset,
+                 output reg [2:0]  m_dsp_offset,
+                 output reg [2:0]  m_rsp_offset,
+                 output reg        m_mem_read,
+                 output reg        m_mem_write,
 
-                    output reg [MC_W-1:0] m_goto_address,
-                    output reg [1:0]      m_goto_mux_reg,
-                    output reg [31:0]     m_goto_mask,
-                    output reg            m_goto_cmd);
-   reg [45:0] rom[0:1 << MC_W - 1];
-   reg [MC_W-1:0] opcodes[255:0];
+                 output reg [8:0]  m_goto_address,
+                 output reg [1:0]  m_goto_mux_reg,
+                 output reg [31:0] m_goto_mask,
+                 output reg        m_goto_cmd);
+   reg [45:0] rom[0:511];
+   reg [8:0] opcodes[0:255];
 
    initial begin
       rom[0] = {4'd6, 4'd6, 2'b01};
