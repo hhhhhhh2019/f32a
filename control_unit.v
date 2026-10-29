@@ -1,39 +1,39 @@
-module control_unit(input wire clk,
-                    input wire rst,
-                    input wire [31:0] mem_in,
-                    output reg [31:0] mem_out,
-                    output reg [31:0] mem_address,
-                    output wire mem_read,
-                    output wire mem_write);
-   reg [31:0] A, B;
-   reg [31:0] pc;
-   reg [31:0] T, S, R, dsp, rsp;
-   reg [7:0]  cmd;
-   reg [8:0]  mc;
-   reg        carry, eam;
+module control_unit(input wire          clk,
+                    input wire          rst,
+                    input wire [31:0]   mem_in,
+                    output logic [31:0] mem_out,
+                    output logic [31:0] mem_address,
+                    output wire         mem_read,
+                    output wire         mem_write);
+   logic [31:0] A, B;
+   logic [31:0] pc;
+   logic [31:0] T, S, R, dsp, rsp;
+   logic [7:0]  cmd;
+   logic [8:0]  mc;
+   logic        carry, eam;
 
-   reg [8:0]  cmd_mc;
+   logic [8:0]  cmd_mc;
 
-   reg [1:0]  m_type;
+   logic [1:0]  m_type;
 
-   reg [1:0]  m_ALU1_mux_reg;
-   reg [1:0]  m_ALU2_mux_reg;
-   reg [1:0]  m_ALU_output_mux_reg;
-   reg [2:0]  m_ALU_op;
+   logic [1:0]  m_ALU1_mux_reg;
+   logic [1:0]  m_ALU2_mux_reg;
+   logic [1:0]  m_ALU_output_mux_reg;
+   logic [2:0]  m_ALU_op;
 
-   reg [3:0]  m_bus_input_mux_reg;
-   reg [3:0]  m_bus_output_mux_reg;
+   logic [3:0]  m_bus_input_mux_reg;
+   logic [3:0]  m_bus_output_mux_reg;
 
-   reg [1:0]  m_pc_offset;
-   reg [1:0]  m_dsp_offset;
-   reg [1:0]  m_rsp_offset;
-   reg        m_mem_read;
-   reg        m_mem_write;
+   logic [1:0]  m_pc_offset;
+   logic [1:0]  m_dsp_offset;
+   logic [1:0]  m_rsp_offset;
+   logic        m_mem_read;
+   logic        m_mem_write;
 
-   reg [8:0]  m_goto_address;
-   reg [1:0]  m_goto_mux_reg;
-   reg [31:0] m_goto_mask;
-   reg        m_goto_cmd;
+   logic [8:0]  m_goto_address;
+   logic [1:0]  m_goto_mux_reg;
+   logic [31:0] m_goto_mask;
+   logic        m_goto_cmd;
 
    microcode microcode(.clk(clk),
                        .mc(mc),
@@ -62,12 +62,12 @@ module control_unit(input wire clk,
                        .m_goto_mask(m_goto_mask),
                        .m_goto_cmd(m_goto_cmd));
 
-   reg [31:0] ALU1_input;
-   reg [31:0] ALU2_input;
+   logic [31:0] ALU1_input;
+   logic [31:0] ALU2_input;
    wire [31:0] ALU_result;
    wire        new_carry;
 
-   reg [31:0]  bus;
+   logic [31:0]  bus;
 
    ALU alu(.a(ALU1_input),
            .b(ALU2_input),
@@ -80,8 +80,8 @@ module control_unit(input wire clk,
    assign mem_read = m_type == 2'b10 && m_mem_read;
    assign mem_write = m_type == 2'b10 && m_mem_write;
 
-   reg [31:0] goto_reg;
-   wire       goto_cond = (goto_reg & m_goto_mask) == 0;
+   logic [31:0] goto_reg;
+   wire         goto_cond = (goto_reg & m_goto_mask) == 0;
 
    always_comb begin
       case (m_ALU1_mux_reg)

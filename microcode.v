@@ -360,7 +360,7 @@ module microcode(input wire        clk,
 
       {m_ALU1_mux_reg, m_ALU2_mux_reg, m_ALU_output_mux_reg, m_ALU_op} <= rom[mc][10:2];
       {m_bus_input_mux_reg, m_bus_output_mux_reg} <= rom[mc][9:2];
-      {m_pc_offset, m_dsp_offset, m_rsp_offset, m_mem_read, m_mem_write} <= rom[mc][12:2];
+      {m_pc_offset, m_dsp_offset, m_rsp_offset, m_mem_read, m_mem_write} <= rom[mc][9:2];
       {m_goto_address, m_goto_mux_reg, m_goto_mask, m_goto_cmd} <= rom[mc][45:2];
 
       cmd_mc <= opcodes[cmd];
