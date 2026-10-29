@@ -64,7 +64,7 @@ m_offset_rsp:
 dataStack.push(<value>)
 
 #+begin_src text :opcode lit
-  clear_carry
+  carry <- 0
 
   mem_out <- S
   dsp -= 4
@@ -84,7 +84,7 @@ dataStack.push(<value>)
 dataStack.push(mem[<address>])
 
 #+begin_src text :opcode fetch_addr
-  clear_carry
+  carry <- 0
 
   mem_out <- S
   dsp -= 4
@@ -107,7 +107,7 @@ dataStack.push(mem[<address>])
 dataStack.push(mem[A])
 
 #+begin_src text :opcode fetch
-  clear_carry
+  carry <- 0
 
   mem_out <- S
   dsp -= 4
@@ -126,7 +126,7 @@ dataStack.push(mem[A])
 dataStack.push(mem[A]); A <- A + 1
 
 #+begin_src text :opcode fetch_plus
-  clear_carry
+  carry <- 0
 
   mem_out <- S
   dsp -= 4
@@ -139,7 +139,7 @@ dataStack.push(mem[A]); A <- A + 1
   T <- mem_in
 
   ALU <- A; ALU <- 1; +; A <- ALU
-  clear_carry
+  carry <- 0
 
   goto ifetch
 #+end_src
@@ -148,7 +148,7 @@ dataStack.push(mem[A]); A <- A + 1
 dataStack.push(mem[B])
 
 #+begin_src text :opcode fetch_b
-  clear_carry
+  carry <- 0
 
   mem_out <- S
   dsp -= 4
@@ -167,7 +167,7 @@ dataStack.push(mem[B])
 mem[<address>] = dataStack.pop()
 
 #+begin_src text :opcode store_addr
-  clear_carry
+  carry <- 0
 
   mem_address <- pc
   mem_read
@@ -190,7 +190,7 @@ mem[<address>] = dataStack.pop()
 mem[A] <- dataStack.pop()
 
 #+begin_src text :opcode store
-  clear_carry
+  carry <- 0
 
   mem_out <- T
   mem_address <- A
@@ -209,7 +209,7 @@ mem[A] <- dataStack.pop()
 mem[A] <- dataStack.pop(); A <- A + 1
 
 #+begin_src text :opcode store_plus
-  clear_carry
+  carry <- 0
 
   mem_out <- T
   mem_address <- A
@@ -222,7 +222,7 @@ mem[A] <- dataStack.pop(); A <- A + 1
   dsp += 4
 
   ALU <- A; ALU <- 1; +; A <- ALU
-  clear_carry
+  carry <- 0
 
   goto ifetch
 #+end_src
@@ -248,7 +248,7 @@ mem[B] <- dataStack.pop()
 A <- dataStack.pop()
 
 #+begin_src text :opcode a_store
-  clear_carry
+  carry <- 0
 
   A <- T
 
@@ -265,7 +265,7 @@ A <- dataStack.pop()
 B <- dataStack.pop()
 
 #+begin_src text :opcode b_store
-  clear_carry
+  carry <- 0
 
   B <- T
 
@@ -282,7 +282,7 @@ B <- dataStack.pop()
 dataStack.push(A)
 
 #+begin_src text :opcode a_fetch
-  clear_carry
+  carry <- 0
 
   dsp -= 4
   mem_out <- S
@@ -313,11 +313,11 @@ dataStack.push(dataStack.pop() + dataStack.pop() + carry&eam)
 T <- T + (if A[0] then S else 0); A <- A >> 1; if T[0] then A[31] <- 1 else A[31] <- 0; T <- T >> 1
 
 #+begin_src text :opcode mul_step
-  clear_carry
+  carry <- 0
 
   if A[0] == 0; goto +*_shift_a
   ALU <- T; ALU <- S; +; T <- ALU
-  clear_carry
+  carry <- 0
 
   +*_shift_a:
   ALU <- A; >>; A <- ALU
