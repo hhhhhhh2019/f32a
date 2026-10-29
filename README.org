@@ -333,12 +333,11 @@ T <- T + (if A[0] then S else 0); A <- A >> 1; if T[0] then A[31] <- 1 else A[31
 #+end_src
 
 ** TODO +/
-
 ** left shift. 2*
 dataStack.push(dataStack.pop() << 1)
 
 #+begin_src text :opcode left_shift
-  clear_carry
+  carry <- 0
   ALU <- T; <<; T <- ALU
 
   goto ifetch
@@ -348,7 +347,7 @@ dataStack.push(dataStack.pop() << 1)
 dataStack.push(dataStack.pop() >> 1)
 
 #+begin_src text :opcode right_shift
-  clear_carry
+  carry <- 0
   ALU <- T; >>; T <- ALU
 
   goto ifetch
@@ -358,7 +357,7 @@ dataStack.push(dataStack.pop() >> 1)
 dataStack.push(~dataStack.pop())
 
 #+begin_src text :opcode inv
-  clear_carry
+  carry <- 0
   ALU <- T; ~; T <- ALU
 
   goto ifetch
@@ -368,7 +367,7 @@ dataStack.push(~dataStack.pop())
 eam <- dataStack.pop()
 
 #+begin_src text :opcode eam
-  clear_carry
+  carry <- 0
   eam <- T
 
   T <- S
@@ -385,7 +384,7 @@ eam <- dataStack.pop()
 dataStack.push(dataStack.pop() & dataStack.pop())
 
 #+begin_src text :opcode and
-  clear_carry
+  carry <- 0
   ALU <- T; ALU <- S; &; T <- ALU
 
   mem_address <- dsp
@@ -400,7 +399,7 @@ dataStack.push(dataStack.pop() & dataStack.pop())
 dataStack.push(dataStack.pop() ^ dataStack.pop())
 
 #+begin_src text :opcode xor
-  clear_carry
+  carry <- 0
   ALU <- T; ALU <- S; ^; T <- ALU
 
   mem_address <- dsp
@@ -415,7 +414,7 @@ dataStack.push(dataStack.pop() ^ dataStack.pop())
 dataStack.pop()
 
 #+begin_src text :opcode drop
-  clear_carry
+  carry <- 0
 
   T <- S
   mem_address <- dsp
@@ -430,7 +429,7 @@ dataStack.pop()
 dataStack.push(dataStack.top()), carry flag does not change
 
 #+begin_src text :opcode dup
-  clear_carry
+  carry <- 0
 
   dsp -= 4
   mem_out <- S
@@ -446,7 +445,7 @@ dataStack.push(dataStack.top()), carry flag does not change
 T <- dataStack.pop(); S <- dataStack.pop(); dataStack.push(S); dataStack.push(T); dataStack.push(S)
 
 #+begin_src text :opcode over
-  clear_carry
+  carry <- 0
 
   dsp -= 4
   mem_out <- S
@@ -465,7 +464,7 @@ T <- dataStack.pop(); S <- dataStack.pop(); dataStack.push(S); dataStack.push(T)
 p <- returnStack.pop()
 
 #+begin_src text :opcode return
-  clear_carry
+  carry <- 0
 
   pc <- T
   T <- S
@@ -483,7 +482,7 @@ p <- returnStack.pop()
 returnStack.push(p); p <- <label>
 
 #+begin_src text :opcode call
-  clear_carry
+  carry <- 0
 
   rsp -= 4
   mem_out <- R
@@ -504,7 +503,7 @@ returnStack.push(p); p <- <label>
 p <- <label>
 
 #+begin_src text :opcode jump
-  clear_carry
+  carry <- 0
 
   mem_address <- pc
   mem_read
@@ -521,7 +520,7 @@ if R != 0 then
 else returnStack.pop()
 
 #+begin_src text :opcode next
-  clear_carry
+  carry <- 0
 
   if R == 0; goto next_return
   ALU <- R; ALU <- -1; +; R <- ALU
@@ -545,7 +544,7 @@ else returnStack.pop()
 if dataStack.pop() == 0 then p <- <label>
 
 #+begin_src text :opcode if
-  clear_carry
+  carry <- 0
 
   if T == 0; goto if_goto
 
@@ -577,7 +576,7 @@ if dataStack.pop() == 0 then p <- <label>
 if dataStack.pop() >= 0 then p <- <label>
 
 #+begin_src text :opcode -if
-  clear_carry
+  carry <- 0
 
   if T[31] == 0; goto -if_goto
 
@@ -606,12 +605,11 @@ if dataStack.pop() >= 0 then p <- <label>
 #+end_src
 
 ** TODO halt
-
 ** RIntoT. r>
 dataStack.push(returnStack.pop())
 
 #+begin_src text :opcode r>
-  clear_carry
+  carry <- 0
 
   dsp -= 4
   mem_out <- S
@@ -633,7 +631,7 @@ dataStack.push(returnStack.pop())
 returnStack.push(dataStack.pop())
 
 #+begin_src text :opcode >r
-  clear_carry
+  carry <- 0
 
   rsp -= 4
   mem_out <- R
