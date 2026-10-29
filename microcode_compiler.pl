@@ -192,7 +192,7 @@ sub parse_offset ($line, $mc) {
 sub parse_goto ($line, $mc) {
     my $m_goto_address = 0;
     my $m_goto_mux_reg = 0;
-    my $m_goto_mask = 0xffffffff;
+    my $m_goto_mask = 0;
     my $m_goto_cmd = 0;
 
     $m_goto_cmd = 1 if ($line =~ s/goto\s+cmd//);
