@@ -2,7 +2,9 @@ module control_unit(input wire clk,
                     input wire rst,
                     input wire [31:0] mem_in,
                     output reg [31:0] mem_out,
-                    output reg [31:0] mem_address);
+                    output reg [31:0] mem_address,
+                    output wire mem_read,
+                    output wire mem_write);
    reg [31:0] A, B;
    reg [31:0] pc;
    reg [31:0] T, S, R, dsp, rsp;
@@ -74,6 +76,9 @@ module control_unit(input wire clk,
            .carry(carry),
            .new_carry(new_carry),
            .eam(eam));
+
+   assign mem_read = m_type == 2'b10 && m_mem_read;
+   assign mem_write = m_type == 2'b10 && m_mem_write;
 
    always_comb begin
       case (m_ALU1_mux_reg)
