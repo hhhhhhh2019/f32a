@@ -1,0 +1,1563 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="180.54858mm"
+   height="146.01289mm"
+   viewBox="0 0 180.54858 146.01289"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="DartArrow"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-7-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-1-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-7-1-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-1-5-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-7-1-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-1-5-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-7-1-1-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-1-5-7-3" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-5-4"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-6-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-5-4-4"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-6-8-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-5-4-4-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-6-8-7-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-59"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-59-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-7-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-59-1-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-7-8-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-5-4-4-8"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-6-8-7-9" />
+    </marker>
+    <symbol
+       id="LogicSymbols.svg:And_Gate">
+      <title
+         id="title11">And Gate</title>
+      <path
+         d="M 25,70 V 60 50 40 30 h 30 c 11.045695,0 20,8.954305 20,20 0,11.045695 -8.954305,20 -20,20 z"
+         id="path12" />
+    </symbol>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-5-4-4-8-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-6-8-7-9-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-5-4-4-8-5-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-6-8-7-9-4-2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-5-4-4-8-5-9-8"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-6-8-7-9-4-2-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-5-4-4-8-5-9-8-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-6-8-7-9-4-2-5-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-5-4-4-8-5-9-8-5-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-6-8-7-9-4-2-5-8-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-5-4-4-8-5-9-8-56"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-6-8-7-9-4-2-5-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-5-4-4-8-5-9-8-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-6-8-7-9-4-2-5-67" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-7-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-1-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-5-4-4-8-5-9-8-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-6-8-7-9-4-2-5-2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7-5-4-4-8-5-91"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-5-6-8-7-9-4-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-0"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-0-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-4-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-0-91"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-4-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-0-91-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-4-9-9" />
+    </marker>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-26.425918,-10.477642)">
+    <g
+       id="g31"
+       transform="translate(0.46744016)">
+      <g
+         id="g18"
+         transform="matrix(1.1638033,0,0,1.7498557,-22.416185,-68.12477)">
+        <rect
+           style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           id="rect1"
+           width="14.032846"
+           height="42.098537"
+           x="111.43731"
+           y="72.673904"
+           ry="0" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.96648px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect1);display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.169055;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         x="120.29356"
+         y="84.783401"
+         id="text3"
+         transform="matrix(1.202874,0,0,1.2584876,-26.845638,2.25703)"><tspan
+           x="115.05742"
+           y="75.41151"
+           id="tspan2">MUX</tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow);paint-order:normal"
+       d="M 122.20667,147.0815 V 134.3871"
+       id="path26" />
+    <g
+       id="g33"
+       transform="translate(0.26081772,-0.09534504)">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow);paint-order:normal"
+         d="m 108.93547,147.17685 v -12.6944"
+         id="path29" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:1.76388px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         x="108.37354"
+         y="148.72038"
+         id="text29"><tspan
+           id="tspan29"
+           style="font-size:1.76388px;stroke-width:0.05;stroke-dasharray:none"
+           x="108.37354"
+           y="148.72038">0</tspan></text>
+    </g>
+    <g
+       id="g34"
+       transform="translate(0.26081772,-0.09534504)">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow);paint-order:normal"
+         d="m 113.27226,147.17685 v -12.6944"
+         id="path27" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:1.76388px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         x="112.9052"
+         y="148.74734"
+         id="text30"><tspan
+           id="tspan30"
+           style="font-size:1.76388px;stroke-width:0.05;stroke-dasharray:none"
+           x="112.9052"
+           y="148.74734">1</tspan></text>
+    </g>
+    <g
+       id="g32"
+       transform="translate(0.26081772,-0.18911504)">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow);paint-order:normal"
+         d="m 117.60906,147.27062 v -12.6944"
+         id="path28" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:1.76388px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         x="114.68574"
+         y="148.59241"
+         id="text31"><tspan
+           id="tspan31"
+           style="font-size:1.76388px;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-opacity:1"
+           x="114.68574"
+           y="148.59241">mem_in</tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       d="m 123.92454,97.135196 h 11.15117 V 50.709299 l -69.07954,0.15384 0.03458,105.113321"
+       id="path34" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow);paint-order:normal"
+       d="m 87.936003,66.533768 18.380187,0.05445"
+       id="path19" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-59);paint-order:normal"
+       d="m 115.92282,42.432513 -0.0282,-18.048938 -28.269234,0.134942"
+       id="path19-8" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-59-1);paint-order:normal"
+       d="m 114.05414,47.591074 -0.0282,-19.587798 -26.432145,0.0081"
+       id="path19-8-4" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-59-1-3);paint-order:normal"
+       d="m 112.07756,52.153838 -0.007,-20.600159 -24.42629,-0.04387"
+       id="path19-8-4-4" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7);paint-order:normal"
+       d="m 159.80248,75.001735 -0.0544,8.410242"
+       id="path19-6" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-5);paint-order:normal"
+       d="m 190.52632,95.773903 -8.41024,-0.0544"
+       id="path19-6-5" />
+    <g
+       id="g17"
+       transform="translate(4.3963962,-15.336694)">
+      <g
+         id="g8"
+         transform="translate(15.453891,13.658815)">
+        <rect
+           style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.184635;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           id="rect7"
+           width="12.199188"
+           height="4.3358603"
+           x="55.886192"
+           y="65.958076" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           x="61.272652"
+           y="68.871696"
+           id="text7"><tspan
+             id="tspan7"
+             style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';fill:#000000;fill-opacity:1;stroke-width:0.15;stroke-dasharray:none"
+             x="61.272652"
+             y="68.871696">A</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g65"
+       transform="translate(0.06387891,18.92545)">
+      <rect
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.184635;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         id="rect7-8"
+         width="12.199188"
+         height="4.3358603"
+         x="42.845245"
+         y="35.357937" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         x="47.418831"
+         y="38.081905"
+         id="text7-9"><tspan
+           id="tspan7-3"
+           style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';fill:#000000;fill-opacity:1;stroke-width:0.15;stroke-dasharray:none"
+           x="47.418831"
+           y="38.081905">mc</tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DartArrow-7-7);paint-order:normal"
+       d="m 74.207183,66.678668 -8.174182,-2e-6"
+       id="path35" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="path36"
+       cx="66.176292"
+       cy="66.653259"
+       r="0.25" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-5);paint-order:normal"
+       d="M 87.969017,75.843315 H 106.32509"
+       id="path20-0" />
+    <g
+       id="g16"
+       transform="translate(4.4052902,-11.617254)">
+      <g
+         id="g8-0"
+         transform="translate(15.453891,19.228514)">
+        <rect
+           style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.184635;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           id="rect7-6"
+           width="12.199188"
+           height="4.3358603"
+           x="55.886192"
+           y="65.958076" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           x="61.272652"
+           y="68.871696"
+           id="text7-1"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';fill:#000000;fill-opacity:1;stroke-width:0.15;stroke-dasharray:none"
+             x="61.272652"
+             y="68.871696"
+             id="tspan8">B</tspan></text>
+      </g>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DartArrow-7-7);paint-order:normal"
+       d="m 74.321183,75.908211 -8.279289,-0.03504"
+       id="path37" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle37"
+       cx="66.185188"
+       cy="75.847771"
+       r="0.25" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow);paint-order:normal"
+       d="M 87.994657,85.101941 H 106.28211"
+       id="path20" />
+    <g
+       id="g15"
+       transform="translate(4.3623032,-7.897813)">
+      <g
+         id="g8-0-5"
+         transform="translate(15.453891,24.798212)">
+        <rect
+           style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.184635;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           id="rect7-6-6"
+           width="12.199188"
+           height="4.3358603"
+           x="55.886192"
+           y="65.958076" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           x="61.272652"
+           y="68.871696"
+           id="text7-1-9"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';fill:#000000;fill-opacity:1;stroke-width:0.15;stroke-dasharray:none"
+             x="61.272652"
+             y="68.871696"
+             id="tspan8-3">T</tspan></text>
+      </g>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DartArrow-7-7);paint-order:normal"
+       d="m 74.33075,85.001347 -8.331842,-2e-6"
+       id="path38" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle38"
+       cx="66.142197"
+       cy="84.975937"
+       r="0.25" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow);paint-order:normal"
+       d="m 87.92603,94.360569 h 18.35608"
+       id="path21" />
+    <g
+       id="g14"
+       transform="translate(4.3623023,-4.1783727)">
+      <g
+         id="g8-0-5-4"
+         transform="translate(15.453892,30.367911)">
+        <rect
+           style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.184635;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           id="rect7-6-6-7"
+           width="12.199188"
+           height="4.3358603"
+           x="55.886192"
+           y="65.958076" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           x="61.272652"
+           y="68.871696"
+           id="text7-1-9-4"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';fill:#000000;fill-opacity:1;stroke-width:0.15;stroke-dasharray:none"
+             x="61.272652"
+             y="68.871696"
+             id="tspan9">S</tspan></text>
+      </g>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DartArrow-7-7);paint-order:normal"
+       d="m 74.295714,94.293491 -8.296806,0.03503"
+       id="path39" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle39"
+       cx="66.142197"
+       cy="94.303116"
+       r="0.25" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow);paint-order:normal"
+       d="M 87.897929,103.68783 106.254,103.6192"
+       id="path22" />
+    <g
+       id="g13"
+       transform="translate(4.3342006,-0.45893257)">
+      <g
+         id="g8-0-5-6"
+         transform="translate(15.453892,35.93761)">
+        <rect
+           style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.184635;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           id="rect7-6-6-8"
+           width="12.199188"
+           height="4.3358603"
+           x="55.886192"
+           y="65.958076" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           x="61.302624"
+           y="68.871696"
+           id="text7-1-9-8"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';fill:#000000;fill-opacity:1;stroke-width:0.15;stroke-dasharray:none"
+             x="61.302624"
+             y="68.871696"
+             id="tspan8-3-43">R</tspan></text>
+      </g>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DartArrow-7-7);paint-order:normal"
+       d="m 74.215059,103.55433 -8.244253,0.035"
+       id="path40" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle40"
+       cx="66.114098"
+       cy="103.56396"
+       r="0.25" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow);paint-order:normal"
+       d="m 87.966335,112.91214 18.321755,-0.0343"
+       id="path23" />
+    <g
+       id="g12"
+       transform="translate(4.3682932,3.2605075)">
+      <g
+         id="g8-0-5-0"
+         transform="translate(15.453892,41.507309)">
+        <rect
+           style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.184635;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           id="rect7-6-6-6"
+           width="12.199188"
+           height="4.3358603"
+           x="55.886192"
+           y="65.958076" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           x="60.72953"
+           y="68.508926"
+           id="text7-1-9-89"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';fill:#000000;fill-opacity:1;stroke-width:0.15;stroke-dasharray:none"
+             x="60.72953"
+             y="68.508926"
+             id="tspan8-3-2">pc</tspan></text>
+      </g>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DartArrow-7-7);paint-order:normal"
+       d="M 74.319223,113.08238 H 66.004899"
+       id="path41" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle41"
+       cx="66.148193"
+       cy="113.05698"
+       r="0.25" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow);paint-order:normal"
+       d="m 87.960123,122.23939 18.356067,-0.10294"
+       id="path24" />
+    <g
+       id="g11"
+       transform="translate(4.3963953,6.9799487)">
+      <g
+         id="g8-0-5-5"
+         transform="translate(15.453892,47.077007)">
+        <rect
+           style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.184635;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           id="rect7-6-6-0"
+           width="12.199188"
+           height="4.3358603"
+           x="55.886192"
+           y="65.958076" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           x="60.421021"
+           y="68.508926"
+           id="text7-1-9-48"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';fill:#000000;fill-opacity:1;stroke-width:0.15;stroke-dasharray:none"
+             x="60.421021"
+             y="68.508926"
+             id="tspan8-3-7">rsp</tspan></text>
+      </g>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DartArrow-7-7);paint-order:normal"
+       d="m 74.31229,122.25937 -8.279289,0.0175"
+       id="path42" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle42"
+       cx="66.176292"
+       cy="122.25148"
+       r="0.25" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow);paint-order:normal"
+       d="M 66.13093,155.85709 H 53.436533"
+       id="path46" />
+    <g
+       id="g48"
+       transform="translate(16.856142,-9.8812964)">
+      <rect
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.184635;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         id="rect46"
+         width="12.199188"
+         height="4.3358603"
+         x="55.886192"
+         y="65.958076" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         x="59.87635"
+         y="68.895988"
+         id="text46"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';fill:#000000;fill-opacity:1;stroke-width:0.15;stroke-dasharray:none"
+           x="59.87635"
+           y="68.895988"
+           id="tspan46">cmd</tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DartArrow-7-7);paint-order:normal"
+       d="m 71.30303,58.096891 -5.510169,0.01327"
+       id="path51" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DartArrow-7-7-9);paint-order:normal"
+       d="m 72.25145,41.845764 14.804222,0.05186 -0.0013,16.276449 -2.066313,0.005"
+       id="path51-7" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle51"
+       cx="66.082115"
+       cy="58.084759"
+       r="0.25" />
+    <g
+       id="g49"
+       transform="translate(4.2383901,11.796031)">
+      <rect
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.184635;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         id="rect48"
+         width="12.199188"
+         height="4.3358603"
+         x="71.268219"
+         y="126.79728" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         x="75.258377"
+         y="129.7352"
+         id="text48"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';fill:#000000;fill-opacity:1;stroke-width:0.15;stroke-dasharray:none"
+           x="75.258377"
+           y="129.7352"
+           id="tspan48">eam</tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DartArrow-7-7);paint-order:normal"
+       d="m 74.134972,140.76985 -8.331842,-1e-5"
+       id="path53" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle53"
+       cx="66.092384"
+       cy="140.74443"
+       r="0.25" />
+    <g
+       id="g56"
+       transform="translate(-5.8222595,0.18194561)">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow);paint-order:normal"
+         d="M 71.953189,151.57189 H 59.258792"
+         id="path45" />
+      <circle
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         id="circle53-1"
+         cx="71.851181"
+         cy="151.51196"
+         r="0.25" />
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-0);paint-order:normal"
+       d="M 42.038647,73.085018 H 35.044692"
+       id="path45-0" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-0-91);paint-order:normal"
+       d="m 43.496217,87.541634 v 6.993955"
+       id="path45-0-5" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-0-91-9);paint-order:normal"
+       d="m 54.392542,87.487414 v 6.993955"
+       id="path45-0-5-0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:1.76389px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.038;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       x="40.120117"
+       y="152.20946"
+       id="text56"><tspan
+         id="tspan56"
+         style="stroke-width:0.038;stroke-dasharray:none"
+         x="40.120117"
+         y="152.20946">mem_address</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:1.76389px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.038;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       x="43.934452"
+       y="156.34492"
+       id="text56-7"><tspan
+         id="tspan56-6"
+         style="stroke-width:0.038;stroke-dasharray:none"
+         x="43.934452"
+         y="156.34492">mem_out</tspan></text>
+    <g
+       id="g77">
+      <rect
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.235;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         id="rect56"
+         width="26.039305"
+         height="21.644136"
+         x="154.55385"
+         y="84.95681" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:4.23333px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.335;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         x="163.74118"
+         y="97.248558"
+         id="text57"><tspan
+           id="tspan57"
+           style="font-size:4.23333px;fill:#000000;fill-opacity:1;stroke-width:0.335;stroke-dasharray:none"
+           x="163.74118"
+           y="97.248558">ALU</tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       d="m 167.89342,106.62835 v 42.03499 l -45.68882,0.002 0.002,-1.87033"
+       id="path57" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow);paint-order:normal"
+       d="m 87.627958,141.05294 60.181262,0.0278 -0.0207,-45.033717 5.21385,-0.0175"
+       id="path1" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow);paint-order:normal"
+       d="m 87.874671,131.42939 18.390389,-0.0343"
+       id="path25" />
+    <g
+       id="g10"
+       transform="translate(4.3452566,10.699389)">
+      <g
+         id="g8-0-5-2"
+         transform="translate(15.453892,52.646706)">
+        <rect
+           style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.184635;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           id="rect7-6-6-2"
+           width="12.199188"
+           height="4.3358603"
+           x="55.886192"
+           y="65.958076" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           x="60.165741"
+           y="68.72287"
+           id="text7-1-9-6"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';fill:#000000;fill-opacity:1;stroke-width:0.15;stroke-dasharray:none"
+             x="60.165741"
+             y="68.72287"
+             id="tspan8-3-1">dsp</tspan></text>
+      </g>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DartArrow-7-7);paint-order:normal"
+       d="m 74.278668,130.8802 -8.296806,-0.0526"
+       id="path2" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle2"
+       cx="66.271118"
+       cy="130.80223"
+       r="0.25" />
+    <g
+       id="g23"
+       transform="translate(0.9130832)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.208;stroke-dasharray:none;stroke-opacity:1"
+         x="154.77571"
+         y="71.145912"
+         id="text23"
+         transform="translate(0.46744017)"><tspan
+           id="tspan23"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';stroke-width:0.208;stroke-dasharray:none"
+           x="154.77571"
+           y="71.145912">MUX</tspan></text>
+      <rect
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.245177;stroke-opacity:1"
+         id="rect23"
+         width="13.470823"
+         height="9.7710342"
+         x="-165.68608"
+         y="65.168213"
+         transform="scale(-1,1)" />
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-7);paint-order:normal"
+       d="m 175.02571,74.938548 -0.0544,8.410242"
+       id="path19-6-7" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-7-1);paint-order:normal"
+       d="m 101.26982,94.378079 -0.002,-38.101112 69.66785,-0.0045 -0.01,7.273672"
+       id="path19-6-7-9" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-7-1-1);paint-order:normal"
+       d="m 173.64461,55.176011 -0.0544,8.410242"
+       id="path19-6-7-9-1" />
+    <g
+       id="g23-2"
+       transform="translate(16.136319,-0.06318738)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.208;stroke-dasharray:none;stroke-opacity:1"
+         x="154.77571"
+         y="71.145912"
+         id="text23-2"
+         transform="translate(0.46744017)"><tspan
+           id="tspan23-6"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';stroke-width:0.208;stroke-dasharray:none"
+           x="154.77571"
+           y="71.145912">MUX</tspan></text>
+      <rect
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.245177;stroke-opacity:1"
+         id="rect23-1"
+         width="13.470823"
+         height="9.7710342"
+         x="-165.68608"
+         y="65.168213"
+         transform="scale(-1,1)" />
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-7-1-1);paint-order:normal"
+       d="m 176.30864,55.176011 -0.0544,8.410242"
+       id="path30" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-7-1-1);paint-order:normal"
+       d="m 178.97267,55.234772 -0.0544,8.410242"
+       id="path31" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.76389px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.108;stroke-dasharray:none;stroke-opacity:1"
+       x="173.18987"
+       y="54.662422"
+       id="text32"><tspan
+         style="font-size:1.76389px;stroke-width:0.108;stroke-dasharray:none"
+         x="173.18987"
+         y="54.662422"
+         id="tspan33">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.76389px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.108;stroke-dasharray:none;stroke-opacity:1"
+       x="175.43318"
+       y="54.645741"
+       id="text34"><tspan
+         id="tspan34"
+         style="font-size:1.76389px;stroke-width:0.108;stroke-dasharray:none"
+         x="175.43318"
+         y="54.645741">-1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.76389px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.108;stroke-dasharray:none;stroke-opacity:1"
+       x="178.46085"
+       y="54.709774"
+       id="text35"><tspan
+         id="tspan35"
+         style="font-size:1.76389px;stroke-width:0.108;stroke-dasharray:none"
+         x="178.46085"
+         y="54.709774">0</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-7-1-7);paint-order:normal"
+       d="m 97.56633,103.70723 -0.02792,-51.418903 58.19691,0.04381 -0.0683,11.181314"
+       id="path19-6-7-9-9" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-7-1-1-7);paint-order:normal"
+       d="m 93.842835,85.03049 -10e-4,-37.493939 64.456465,0.0045 0.0268,16.072562"
+       id="path19-6-7-9-1-4" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-7-1-1-7);paint-order:normal"
+       d="m 90.839486,66.533801 -0.0043,-24.183094 70.166864,0.0036 -0.0506,21.239645"
+       id="path30-8" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-7-1-1-7);paint-order:normal"
+       d="m 163.71349,55.202049 -0.0544,8.410242"
+       id="path31-1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.76389px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.108;stroke-dasharray:none;stroke-opacity:1"
+       x="163.20166"
+       y="54.677052"
+       id="text35-0"><tspan
+         id="tspan35-8"
+         style="font-size:1.76389px;stroke-width:0.108;stroke-dasharray:none"
+         x="163.20166"
+         y="54.677052">0</tspan></text>
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle60"
+       cx="90.860474"
+       cy="66.504379"
+       r="0.25" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle60-3"
+       cx="112.09949"
+       cy="52.246506"
+       r="0.25" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle60-3-1"
+       cx="114.05538"
+       cy="47.566402"
+       r="0.25" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle60-3-1-3"
+       cx="115.92402"
+       cy="42.353859"
+       r="0.25" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle61"
+       cx="93.808281"
+       cy="84.965408"
+       r="0.25" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle61-1"
+       cx="48.818714"
+       cy="61.433186"
+       r="0.25" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle61-6"
+       cx="101.26874"
+       cy="94.371582"
+       r="0.25" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.238;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle62"
+       cx="97.589813"
+       cy="103.63487"
+       r="0.25" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:1.76389px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.038;stroke-dasharray:none;stroke-opacity:1"
+       x="191.03621"
+       y="96.166695"
+       id="text62"><tspan
+         id="tspan62"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';fill:#000000;fill-opacity:1;stroke-width:0.038;stroke-dasharray:none"
+         x="191.03621"
+         y="96.166695">m_ALU_op</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-5-4);paint-order:normal"
+       d="m 191.65153,69.705416 -8.41024,-0.0544"
+       id="path19-6-5-3" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:1.76389px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.038;stroke-dasharray:none;stroke-opacity:1"
+       x="192.16141"
+       y="70.098206"
+       id="text62-0"><tspan
+         id="tspan62-4"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';fill:#000000;fill-opacity:1;stroke-width:0.038;stroke-dasharray:none"
+         x="192.16141"
+         y="70.098206">m_ALU2_mux_reg</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-5-4-4);paint-order:normal"
+       d="m 143.21079,70.427709 8.41024,-0.0544"
+       id="path19-6-5-3-1" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-5-4-4-8);paint-order:normal"
+       d="m 81.707184,12.414918 -0.01078,8.41024"
+       id="path19-6-5-3-1-6" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-5-4-4-8-5);paint-order:normal"
+       d="m 77.425224,30.110752 -8.41024,-0.01078"
+       id="path19-6-5-3-1-6-9" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-5-4-4-8-5-91);paint-order:normal"
+       d="m 73.142789,20.519675 0.0016,7.964341 -4.20512,-0.0054"
+       id="path19-6-5-3-1-6-9-8" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-5-4-4-8-5-9);paint-order:normal"
+       d="m 61.985324,29.37082 -5.727834,-0.0089 -0.01644,8.466439 -1.915837,0.02531"
+       id="path19-6-5-3-1-6-9-7" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-5-4-4-8-5-9-8);paint-order:normal"
+       d="m 48.968184,39.585304 7.4e-4,1.128818 -1.883262,0.0034 -0.01558,4.596066"
+       id="path19-6-5-3-1-6-9-7-4" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-5-4-4-8-5-9-8-3);paint-order:normal"
+       d="M 63.463085,41.995274 50.642246,41.982792 50.615679,45.3871"
+       id="path19-6-5-3-1-6-9-7-4-99" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-5-4-4-8-5-9-8-56);paint-order:normal"
+       d="m 50.554301,25.836525 -0.0088,7.844764"
+       id="path19-6-5-3-1-6-9-7-4-0" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-5-4-4-8-5-9-8-5);paint-order:normal"
+       d="m 48.828053,58.532591 -0.0088,8.113391"
+       id="path19-6-5-3-1-6-9-7-4-8" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-5-4-4-8-5-9-8-5-2);paint-order:normal"
+       d="m 48.720776,61.46692 -9.333697,0.02189 -0.003,-29.644555 7.730901,7.06e-4 -0.0022,2.063022"
+       id="path19-6-5-3-1-6-9-7-4-8-2" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:1.76389px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.038;stroke-dasharray:none;stroke-opacity:1"
+       x="136.90959"
+       y="69.06794"
+       id="text62-0-7"><tspan
+         id="tspan62-4-5"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';fill:#000000;fill-opacity:1;stroke-width:0.038;stroke-dasharray:none"
+         x="136.90959"
+         y="69.06794">m_ALU1_mux_reg</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-5-4-4-2);paint-order:normal"
+       d="m 134.07497,118.26775 -8.41024,-0.0544"
+       id="path19-6-5-3-1-5" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:1.76389px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.038;stroke-dasharray:none;stroke-opacity:1"
+       x="126.31313"
+       y="116.95882"
+       id="text62-0-7-7"><tspan
+         id="tspan62-4-5-4"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';fill:#000000;fill-opacity:1;stroke-width:0.038;stroke-dasharray:none"
+         x="126.31313"
+         y="116.95882">m_bus_input_mux_reg</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:1.76389px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.038;stroke-dasharray:none;stroke-opacity:1"
+       x="75.354576"
+       y="11.665391"
+       id="text63"><tspan
+         id="tspan63"
+         style="stroke-width:0.038;stroke-dasharray:none"
+         x="75.354576"
+         y="11.665391">m_goto_mux_reg</tspan></text>
+    <g
+       id="g64">
+      <rect
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.192277;stroke-dasharray:none;stroke-opacity:1"
+         id="rect62"
+         width="8.4317226"
+         height="11.677721"
+         x="77.617584"
+         y="22.468231" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.138;stroke-dasharray:none;stroke-opacity:1"
+         x="79.361763"
+         y="29.035213"
+         id="text64"><tspan
+           id="tspan64"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';fill:#000000;fill-opacity:1;stroke-width:0.138;stroke-dasharray:none"
+           x="79.361763"
+           y="29.035213">MUX</tspan></text>
+    </g>
+    <g
+       id="g66"
+       transform="translate(0.56537892,1.1576959)">
+      <rect
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.192276;stroke-dasharray:none;stroke-opacity:1"
+         id="rect62-0"
+         width="7.8818169"
+         height="4.2395253"
+         x="44.289711"
+         y="34.166237" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.138;stroke-dasharray:none;stroke-opacity:1"
+         x="45.75893"
+         y="37.014122"
+         id="text64-5"><tspan
+           id="tspan64-1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';fill:#000000;fill-opacity:1;stroke-width:0.138;stroke-dasharray:none"
+           x="45.75893"
+           y="37.014122">MUX</tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-7-5-4-4-8-5-9-8-2);paint-order:normal"
+       d="m 48.9708,51.014388 -0.0088,1.61632"
+       id="path19-6-5-3-1-6-9-7-4-9" />
+    <g
+       id="g66-8"
+       transform="translate(0.56799447,12.58678)">
+      <rect
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.192276;stroke-dasharray:none;stroke-opacity:1"
+         id="rect62-0-7"
+         width="7.8818169"
+         height="4.2395253"
+         x="44.289711"
+         y="34.166237" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.138;stroke-dasharray:none;stroke-opacity:1"
+         x="45.75893"
+         y="37.014122"
+         id="text64-5-2"><tspan
+           id="tspan64-1-8"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';fill:#000000;fill-opacity:1;stroke-width:0.138;stroke-dasharray:none"
+           x="45.75893"
+           y="37.014122">MUX</tspan></text>
+    </g>
+    <use
+       xlink:href="#LogicSymbols.svg:And_Gate"
+       style="fill:none;stroke:#000000;stroke-width:2"
+       id="use1"
+       transform="matrix(-0.10762535,0,0,0.10762535,70.182613,23.938386)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.038;stroke-dasharray:none;stroke-opacity:1"
+       x="36.17482"
+       y="44.025307"
+       id="text66"><tspan
+         id="tspan66"
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.038;stroke-dasharray:none;stroke-opacity:1"
+         x="36.17482"
+         y="44.025307">+1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.038;stroke-dasharray:none;stroke-opacity:1"
+       x="42.615162"
+       y="25.363001"
+       id="text67"><tspan
+         id="tspan67"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';stroke-width:0.038"
+         x="42.615162"
+         y="25.363001">m_goto_address</tspan></text>
+    <g
+       id="g72">
+      <rect
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.238;stroke-dasharray:none;stroke-opacity:1"
+         id="rect67"
+         width="7.262804"
+         height="9.8508501"
+         x="63.468708"
+         y="37.370049" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:1.41111px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.138;stroke-dasharray:none;stroke-opacity:1"
+         x="67.096321"
+         y="41.925125"
+         id="text68"><tspan
+           id="tspan68"
+           style="font-size:1.41111px;stroke-width:0.138;stroke-dasharray:none"
+           x="67.096321"
+           y="41.925125">opcodes</tspan><tspan
+           style="font-size:1.41111px;stroke-width:0.138;stroke-dasharray:none"
+           x="67.096321"
+           y="43.689014"
+           id="tspan72">ROM</tspan></text>
+    </g>
+    <g
+       id="g73"
+       transform="translate(0.50375631,0.08395939)">
+      <rect
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.238;stroke-dasharray:none;stroke-opacity:1"
+         id="rect67-4"
+         width="14.029673"
+         height="19.39262"
+         x="41.59164"
+         y="68.115639" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:1.41111px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.138;stroke-dasharray:none;stroke-opacity:1"
+         x="48.587528"
+         y="77.441605"
+         id="text68-2"><tspan
+           style="font-size:1.41111px;stroke-width:0.138;stroke-dasharray:none"
+           x="48.587528"
+           y="77.441605"
+           id="tspan70">microcode</tspan><tspan
+           style="font-size:1.41111px;stroke-width:0.138;stroke-dasharray:none"
+           x="48.587528"
+           y="79.20549"
+           id="tspan71">ROM</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:1.41111px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.038;stroke-dasharray:none;stroke-opacity:1"
+       x="68.86264"
+       y="20.044434"
+       id="text69"><tspan
+         id="tspan69"
+         style="stroke-width:0.038;stroke-dasharray:none"
+         x="68.86264"
+         y="20.044434">m_goto_mask</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:1.41111px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.038;stroke-dasharray:none;stroke-opacity:1"
+       x="26.319515"
+       y="73.42762"
+       id="text73"><tspan
+         id="tspan73"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.038"
+         x="26.319515"
+         y="73.42762">mem_write</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.237954;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow-0-9);paint-order:normal"
+       d="M 42.061236,76.337127 H 35.067281"
+       id="path45-0-3" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:1.41111px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.038;stroke-dasharray:none;stroke-opacity:1"
+       x="26.342106"
+       y="76.679726"
+       id="text73-8"><tspan
+         id="tspan73-0"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.038"
+         x="26.342106"
+         y="76.679726">mem_read</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.74881px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.038;stroke-dasharray:none;stroke-opacity:1"
+       x="45.021461"
+       y="92.119949"
+       id="text74"><tspan
+         id="tspan74"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.74881px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text';fill:#000000;fill-opacity:1;stroke-width:0.038"
+         x="45.021461"
+         y="92.119949">......</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:2.11667px;font-family:'SF Pro Text';-inkscape-font-specification:'SF Pro Text Thin';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.038;stroke-dasharray:none;stroke-opacity:1"
+       x="38.945129"
+       y="98.343422"
+       id="text75"><tspan
+         id="tspan75"
+         style="stroke-width:0.038"
+         x="38.945129"
+         y="98.343422">тут WE для регистров</tspan><tspan
+         style="stroke-width:0.038"
+         x="38.945129"
+         y="100.98926"
+         id="tspan76">всякие там m_ALU_op</tspan><tspan
+         style="stroke-width:0.038"
+         x="38.945129"
+         y="103.63509"
+         id="tspan77">и т.д. и т.п.</tspan></text>
+  </g>
+</svg>
